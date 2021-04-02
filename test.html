@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .grid-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr, minmax(1fr, auto), 1fr;
+            grid-template-rows: 1fr;
+        }
+        
+        .box {
+            width: 100%;
+        }
+        
+        .one {
+            grid-column: 1;
+        }
+        
+        .two {
+            grid-column: 2;
+        }
+        
+        .three {
+            grid-column: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="box one">
+            <img src="./images/image-about-dark.jpg" alt="image-about-dark">
+        </div>
+        <div class="box two">
+            <h2>This is a test page</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi repellat vero quasi, voluptates ipsa delectus perferendis facere corporis sapiente officia at beatae corrupti quam atque blanditiis sit, asperiores porro mollitia maiores sequi
+                eveniet, unde molestiae! Modi mollitia aperiam vero in placeat aliquam libero accusamus non error eligendi! Ducimus, vel saepe?</p>
+        </div>
+        <div class="box three">
+            <img src="./images/image-about-light.jpg" alt="image-about-light">
+        </div>
+    </div>
+</body>
+
+</html>
