@@ -91,7 +91,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     position: relative;
 }
 
@@ -106,6 +106,7 @@ body {
 
 .content {
     padding: 3em 2em;
+    position: relative;
 }
 
 .content .title {
@@ -132,8 +133,8 @@ body {
 .slider-btn {
     position: absolute;
     right: 0;
-    top: 50vh;
-    width: auto;
+    top: 0;
+    transform: translateY(-100%);
     padding: .7em 1.5em;
     background-color: var(--Black);
     transition: 0.6s ease;
@@ -141,14 +142,18 @@ body {
     -moz-transition: 0.6s ease;
     -ms-transition: 0.6s ease;
     -o-transition: 0.6s ease;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
 }
 
 .prev {
-    padding-right: .5em;
+    padding-right: 1em;
 }
 
 .next {
-    padding-left: .5em;
+    padding-left: 1em;
 }
 
 
@@ -248,16 +253,15 @@ img {
         color: var(--White);
     }
     .slider-btn {
+        display: flex;
         top: initial;
-        margin-top: -200px;
         bottom: 0;
-        right: 40%;
-        transform: translateX(-40%);
-        -webkit-transform: translateX(-0%);
-        -moz-transform: translateX(-40%);
-        -ms-transform: translateX(-40%);
-        -o-transform: translateX(-40%);
-        -webkit-transform: translateX(-40%);
+        right: 100%;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
     }
     .about {
         display: grid;
@@ -287,6 +291,10 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+    .container {
+        max-width: 2000px;
+        margin: 0 auto;
+    }
     .slide {
         display: grid;
         grid-template-columns: 60% 40%;
